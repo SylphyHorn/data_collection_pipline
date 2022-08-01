@@ -88,7 +88,7 @@ def test():
     df.reset_index(inplace = True)
     df.columns  = ['name','meta score']
     print('successful!')
-    DATABASE_TYPE = 'postgresql'
+    '''DATABASE_TYPE = 'postgresql'
     DBAPI = 'psycopg2'
     ENDPOINT = 'database-2.c1smg8vtsvp8.us-east-1.rds.amazonaws.com' # Change it for your AWS endpoint
     USER = 'postgres'
@@ -97,7 +97,7 @@ def test():
     DATABASE = 'postgres'
     engine = create_engine(f"{DATABASE_TYPE}+{DBAPI}://{USER}:{PASSWORD}@{ENDPOINT}:{PORT}/{DATABASE}")
     engine.connect()
-    df.to_sql('meta_critics_ps4_data', engine, if_exists='replace')
+    df.to_sql('meta_critics_ps4_data', engine, if_exists='replace')'''
 
 if __name__ == '__main__':
     test()

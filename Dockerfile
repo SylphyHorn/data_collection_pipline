@@ -1,5 +1,6 @@
 FROM python:3.9
 
+
 # Update the system and install firefox
 RUN apt-get update 
 RUN apt -y upgrade 
@@ -22,4 +23,3 @@ COPY . .
 RUN pip install -r requirements.txt
 
 CMD ["python", "meta_scraper.py"]
-
